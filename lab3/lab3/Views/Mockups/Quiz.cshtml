@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Hello Quiz - Backend3";
+}
+
+@model Mockups
+<h2>Quiz</h2>
+<form>
+    @ViewBag.ans
+    @switch (Model.oper)
+    {
+        case 0:<p> @Model.x  + @Model.y</p> break;
+    case 1: <p> @Model.x  - @Model.y</p>break;
+case 2: <p> @Model.x * @Model.y</p>break;
+case 3: <p> @Model.x  / @Model.y</p>break;
+}
+    <input name="ans"><br />
+    <input name="x" type="hidden" value="@Model.x"><br />
+    <input name="y" type="hidden" value="@Model.y"><br />
+    <input name="oper" type="hidden" value="@Model.oper"><br />
+    <input type="submit" formmethod="get" value="Next">
+    <input type="submit" formmethod="post" value="Finish">
+</form>
+
+
+

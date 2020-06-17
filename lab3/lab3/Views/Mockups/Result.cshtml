@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Hello Quiz - Backend3";
+}
+
+@model List<Mockups>
+<h2>Quiz Result</h2>
+<p>Right answers @ViewBag.ans out of @Model.Count</p>
+<ol>
+    @foreach (Mockups c in Model)
+    {
+        switch (c.oper)
+        {
+            case 0:
+                <li> @c.x  + @c.y = @c.ans</li> break;
+            case 1:
+                <li> @c.x  - @c.y= @c.ans</li>break;
+            case 2:
+                <li> @c.x * @c.y= @c.ans</li>break;
+            case 3:
+                <li> @c.x  / @c.y= @c.ans</li>break;
+        }
+    }
+</ol>
+

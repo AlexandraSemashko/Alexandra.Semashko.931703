@@ -1,0 +1,14 @@
+﻿@{
+    @model WebApplication2.Models.Maths
+
+    ViewData["Title"] = "PassUsingModel";
+}
+<h2>PassUsingModel</h2>
+<h5><b>Rand Value First :</b> @Model.x</h5>
+<h5><b>Rand Value Second :</b> @Model.y</h5>
+<h5><b>Add :</b><br>@Model.x + @Model.y = @Model.Add()</h5>
+<h5><b>Sub :</b><br>@Model.x - @Model.y = @Model.Sub()</h5>
+<h5><b>Mult :</b><br>@Model.x * @Model.y = @Model.Mult()</h5>
+<h5><b>Div :</b><br>@Model.x / @Model.y = @Model.Div()</h5>
+
+
